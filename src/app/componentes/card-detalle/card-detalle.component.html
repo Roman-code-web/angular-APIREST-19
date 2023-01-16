@@ -1,43 +1,43 @@
 <div class="container">
-    <div class="row d-flex justify-content-center card__border" *ngFor="let pokemon of pokemonDetalle">
+    <div class="row d-flex justify-content-center card__border">
         <div class="col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center" >
-                <img style="width: 70%;" src="{{pokemon.imagen}}" class="card-img-top" alt="...">
+                <img style="width: 70%;" src="{{pokemonDetalle.imagen}}" class="card-img-top" alt="...">
         </div>
         <div class="col-md-6 col-sm-12 col-xs-12 p-3" >
             <div class="card border-0 ">
-                <h2 class="fw-bold fs-2 text-center py-3">{{pokemon.nombre | uppercase}}</h2>
-                <h5 class="fw-bold text-center">Código:  {{pokemon.index}} </h5>
+                <h2 class="fw-bold fs-2 text-center py-3">{{pokemonDetalle.nombre | uppercase}}</h2>
+                <h5 class="fw-bold text-center">Código:  {{pokemonDetalle.index}} </h5>
                 <div class="container py-3">
                       <div class="row">
                         <!----------ataque------>
                         <div class="col-md-9 col-sm-9 col-xs-9 mb-3">
                             <h6>ATAQUE</h6>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemon.ataque}}" aria-valuemin="0" attr.aria-valuemax="{{pokemon.ataque}}">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:{{pokemon.ataque + '%'}} "></div>
+                            <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemonDetalle.ataque}}" aria-valuemin="0" attr.aria-valuemax="{{pokemonDetalle.ataque}}">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:{{pokemonDetalle.ataque + '%'}} "></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3 mb-3">
-                            <p class="fw-bold ">{{pokemon.ataque}}K</p>
+                            <p class="fw-bold ">{{pokemonDetalle.ataque}}K</p>
                         </div>
                          <!----------especial------>
                         <div class="col-md-9 col-sm-9 col-xs-9 mb-3">
                             <h6>ESPECIAL</h6>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemon.especial}}" aria-valuemin="0" attr.aria-valuemax="{{pokemon.especial}}">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:{{pokemon.especial + '%'}} "></div>
+                            <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemonDetalle.especial}}" aria-valuemin="0" attr.aria-valuemax="{{pokemonDetalle.especial}}">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:{{pokemonDetalle.especial + '%'}} "></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3 mb-3">
-                            <p class="fw-bold ">{{pokemon.especial}}K</p>
+                            <p class="fw-bold ">{{pokemonDetalle.especial}}K</p>
                         </div>
                          <!----------defensa------>
                         <div class="col-md-9 col-sm-9 col-xs-9 mb-3">
                             <h6>DEFENSA</h6>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemon.defensa}}" aria-valuemin="0" attr.aria-valuemax="{{pokemon.defensa}}">
-                                <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:{{pokemon.defensa + '%'}} "></div>
+                            <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemonDetalle.defensa}}" aria-valuemin="0" attr.aria-valuemax="{{pokemonDetalle.defensa}}">
+                                <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:{{pokemonDetalle.defensa + '%'}} "></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3 mb-3">
-                            <p class="fw-bold ">{{pokemon.defensa}}K</p>
+                            <p class="fw-bold ">{{pokemonDetalle.defensa}}K</p>
                         </div>
                       </div>
                 </div>

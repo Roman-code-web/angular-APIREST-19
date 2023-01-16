@@ -1,5 +1,5 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { DataPokemonService } from 'src/app/servicios/data-pokemon.service';
 
 @Component({
@@ -15,8 +15,11 @@ export class CardDetalleComponent implements OnInit  {
   constructor(private dataPokemon: DataPokemonService, private ruta:ActivatedRoute){}
   //3.oninit
   ngOnInit(): void {
-  this.nomOrCod= String(this.ruta.snapshot.paramMap.get('id'));
-  this.getPokemonIDorCOD(this.nomOrCod);
+    this.ruta.paramMap.subscribe((params: ParamMap) => {
+      this.nomOrCod = String( params.get('id'));
+      this.getPokemonIDorCOD(this.nomOrCod);
+    })
+
   }
 
   //4.funcion
@@ -33,9 +36,11 @@ export class CardDetalleComponent implements OnInit  {
           defensa:res.stats[2].base_stat,
 
         }
-        this.pokemonDetalle.push(pokemon) ;
+        this.pokemonDetalle=pokemon ;
+        console.log(this.pokemonDetalle)
       },
       error=>{}
     )
+   
   }
 }
