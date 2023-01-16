@@ -26,9 +26,9 @@ this.getPokemons();
         pokemon={
           index:i,
           imagen:res.sprites.front_default,
-          nombre: res.name
+          nombre: res.name,
         }
-        this.listaPokemon.push(pokemon)
+        this.listaPokemon.push(pokemon);
       },
       error=>{}
      )

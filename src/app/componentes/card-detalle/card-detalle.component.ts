@@ -32,6 +32,5 @@ export class CardDetalleComponent implements OnInit {
       },
       error=>{}
     )
-    console.log(this.pokemonDetalle)
   }
 }

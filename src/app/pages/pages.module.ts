@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ComponentesModule } from '../componentes/componentes.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +17,7 @@ import { ComponentesModule } from '../componentes/componentes.module';
   imports: [
     CommonModule,
     ComponentesModule,
+    RouterModule
   ]
 })
 export class PagesModule { }
