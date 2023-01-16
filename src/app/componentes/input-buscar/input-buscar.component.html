@@ -1,0 +1,12 @@
+<div class="container">
+    <form class="">
+        <div class="mb-3 d-flex justify-content-center gap-3">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="buscar" placeholder="Buscar pokemon" name="buscar" [(ngModel)]="nomOrCod">
+                <label for="floatingTextarea">Buscar pokemon</label>
+            </div>
+            
+            <button [routerLink]="['/detalle/',nomOrCod]" routerLinkActive="router-link-active"   class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+</div>
