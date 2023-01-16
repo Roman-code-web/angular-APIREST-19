@@ -7,6 +7,9 @@
                   <h5 class="card-title text-center fw-bold">{{pokemon.nombre}}</h5>
                   <h5 class="card-title text-center">{{pokemon.index}}</h5>
                 </div>
+                <div class="d-flex justify-content-center pb-3">
+                    <a class="btn btn-primary" [routerLink]="['/detalle',pokemon.index]" >ver detalle</a>
+                </div>
             </div>
         </div>
     </div>
