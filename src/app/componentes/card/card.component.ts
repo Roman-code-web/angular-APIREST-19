@@ -33,7 +33,7 @@ this.getPokemons();
       error=>{}
      )
     }
-    console.log(this.listaPokemon);
+   // console.log(this.listaPokemon);
   }
 
 }
