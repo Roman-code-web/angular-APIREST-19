@@ -1,4 +1,15 @@
-<div class="container">
+
+<div class="container" *ngIf="pokemonDetalle=='error' else divPokemon">
+    <div class="row d-flex justify-content-center card__border py-5">
+        <p class="text-center fs-5 fw-bold">No existe ese pokemon</p>
+        <div class="container d-flex justify-content-center ">
+            <a class="btn btn__bg px-5" [routerLink]="['/']" routerLinkActive="router-link-active" >volver</a>
+        </div> 
+    </div>
+    
+</div>
+<ng-template #divPokemon>
+<div class="container" >
     <div class="row d-flex justify-content-center card__border">
         <div class="col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center" >
                 <img style="width: 70%;" src="{{pokemonDetalle.imagen}}" class="card-img-top" alt="...">
@@ -13,7 +24,7 @@
                         <div class="col-md-9 col-sm-9 col-xs-9 mb-3">
                             <h6>ATAQUE</h6>
                             <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemonDetalle.ataque}}" aria-valuemin="0" attr.aria-valuemax="{{pokemonDetalle.ataque}}">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:{{pokemonDetalle.ataque + '%'}} "></div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" attr.style="{{'width:' + pokemonDetalle.ataque + '%'}}"></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3 mb-3">
@@ -23,7 +34,7 @@
                         <div class="col-md-9 col-sm-9 col-xs-9 mb-3">
                             <h6>ESPECIAL</h6>
                             <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemonDetalle.especial}}" aria-valuemin="0" attr.aria-valuemax="{{pokemonDetalle.especial}}">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:{{pokemonDetalle.especial + '%'}} "></div>
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" attr.style="{{'width:' + pokemonDetalle.especial + '%'}}"></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3 mb-3">
@@ -33,7 +44,7 @@
                         <div class="col-md-9 col-sm-9 col-xs-9 mb-3">
                             <h6>DEFENSA</h6>
                             <div class="progress" role="progressbar" aria-label="Animated striped example" attr.aria-valuenow="{{pokemonDetalle.defensa}}" aria-valuemin="0" attr.aria-valuemax="{{pokemonDetalle.defensa}}">
-                                <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:{{pokemonDetalle.defensa + '%'}} "></div>
+                                <div class="progress-bar  progress-bar-striped progress-bar-animated" attr.style="{{'width:' + pokemonDetalle.defensa + '%'}}"></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3 mb-3">
@@ -43,9 +54,10 @@
                 </div>
             </div>
             <div class="container d-flex justify-content-center ">
-                <a class="btn btn-primary" [routerLink]="['/']" routerLinkActive="router-link-active" >volver</a>
+                <a class="btn btn__bg px-5" [routerLink]="['/']" routerLinkActive="router-link-active" >volver</a>
             </div> 
         </div>  
     </div>     
         
 </div>    
+</ng-template>

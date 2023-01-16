@@ -13,7 +13,7 @@ export class CardComponent implements OnInit {
 //2. services
 constructor(public dataPokemon:DataPokemonService){}
 //3.implementamos el oninit
-ngOnInit():void{
+ngOnInit():void{  
 this.getPokemons();
 }
 //4.funcion

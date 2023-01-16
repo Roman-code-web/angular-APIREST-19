@@ -4,3 +4,8 @@
 .progress, .progress-stacked{
     background-color: rgb(207, 204, 204);
 }
+.btn__bg{
+    background-color: #175dc1;
+    color: #fff;
+    font-weight: 600;
+}

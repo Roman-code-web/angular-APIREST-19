@@ -1,5 +1,5 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { DataPokemonService } from 'src/app/servicios/data-pokemon.service';
 
 @Component({
@@ -18,6 +18,7 @@ export class CardDetalleComponent implements OnInit  {
     this.ruta.paramMap.subscribe((params: ParamMap) => {
       this.nomOrCod = String( params.get('id'));
       this.getPokemonIDorCOD(this.nomOrCod);
+      console.log(this.pokemonDetalle)
     })
 
   }
@@ -37,9 +38,10 @@ export class CardDetalleComponent implements OnInit  {
 
         }
         this.pokemonDetalle=pokemon ;
-        console.log(this.pokemonDetalle)
       },
-      error=>{}
+      error=>{
+        this.pokemonDetalle='error';
+      }
     )
    
   }

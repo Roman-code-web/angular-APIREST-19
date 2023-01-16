@@ -1,4 +1,8 @@
 .card__border{
     box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.150);
 }
-
+.btn__bg{
+    background-color: #00337C;
+    color: #fff;
+    font-weight: 600;
+}
