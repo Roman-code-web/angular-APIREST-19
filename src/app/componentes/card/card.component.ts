@@ -19,10 +19,16 @@ this.getPokemons();
 //4.funcion
 
   getPokemons(){
-    for (let i = 1; i < 150; i++) {
+    let pokemon;
+    for (let i = 1; i <=150; i++) {
      this.dataPokemon.getPokemon(String(i)).subscribe(
       res=>{
-        this.listaPokemon.push(res)
+        pokemon={
+          index:i,
+          imagen:res.sprites.front_default,
+          nombre: res.name
+        }
+        this.listaPokemon.push(pokemon)
       },
       error=>{}
      )
